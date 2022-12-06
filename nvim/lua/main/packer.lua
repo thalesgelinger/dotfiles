@@ -14,5 +14,5 @@ return require('packer').startup(function(use)
   -- Flutter plugins
   use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
   use {'reisub0/hot-reload.vim'}
-
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 end)
