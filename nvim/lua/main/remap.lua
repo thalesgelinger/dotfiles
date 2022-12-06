@@ -1,4 +1,4 @@
-local nnoremap = require("thales.keymap").nnoremap
+local nnoremap = require("main.keymap").nnoremap
 
 nnoremap("<leader>e", "<cmd>Ex<CR>")
 nnoremap("<C-s>", "<cmd>w<CR>")

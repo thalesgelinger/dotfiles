@@ -1,1 +1,1 @@
-require("thales")
+require("main")
