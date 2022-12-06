@@ -1,3 +1,12 @@
-vim.g.dracula_colorterm = 0
 
-vim.cmd "colorscheme dracula"
+require("tokyonight").setup {
+    style = "storm",
+    transparent = true
+}
+
+vim.g.tokyonight_transparent_sidebar = true
+vim.g.tokyonight_transparent = true
+vim.opt.background = "dark"
+
+vim.cmd "colorscheme tokyonight"
+ 
