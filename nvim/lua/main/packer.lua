@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use {'nvim-treesitter/nvim-treesitter'}
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
       requires = { {'nvim-lua/plenary.nvim'} }
@@ -24,5 +25,5 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use {"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"}
   use { 'saadparwaiz1/cmp_luasnip' }
-  use {'nvim-treesitter/nvim-treesitter'}
+  use 'lewis6991/gitsigns.nvim'
 end)
