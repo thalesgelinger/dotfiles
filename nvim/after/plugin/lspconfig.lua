@@ -60,3 +60,5 @@ lspconfig["luau_lsp"].setup{
     flags = lsp_flags,
     capabilities = capabilities,
 }
+
+lspconfig["dartls"].setup{}
