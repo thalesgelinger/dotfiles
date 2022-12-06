@@ -1,0 +1,33 @@
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 6
+    y: 6
+
+  title: Alacritty
+  opacity: .8 
+
+import:
+  - /dracula.yml
+
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - --login
+
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+  bold:
+    family: Hack Nerd Font
+    style: Bold 
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+  size: 16.0
+key_bindings:
+  - { key: F,mods: Control, chars: "op \x0D"}
