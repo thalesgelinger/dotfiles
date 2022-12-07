@@ -11,8 +11,11 @@ nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzz") 
 nnoremap("N", "Nzz") 
 
-nnoremap("<leader>f", "<cmd>Telescope find_files<CR>")
-nnoremap("<leader>s", "<cmd>Telescope live_grep<CR>")
+local builtin = require('telescope.builtin')
+nnoremap('<leader>ff', builtin.find_files)
+nnoremap('<leader>fg', builtin.live_grep)
+nnoremap('<leader>fb', builtin.buffers)
+nnoremap('<leader>fh', builtin.help_tags)
 
 inoremap("(", "()<left>")
 inoremap("[", "[]<left>")
