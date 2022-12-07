@@ -8,9 +8,11 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.cursorline = true
 
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
 vim.g.mapleader = " "
+
