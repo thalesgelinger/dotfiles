@@ -13,8 +13,6 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
       requires = { {'nvim-lua/plenary.nvim'} }
   }
-  -- Flutter plugins
-  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
   use 'reisub0/hot-reload.vim'
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'jose-elias-alvarez/null-ls.nvim'
@@ -27,4 +25,13 @@ return require('packer').startup(function(use)
   use {"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"}
   use { 'saadparwaiz1/cmp_luasnip' }
   use 'lewis6991/gitsigns.nvim'
+  use {
+      "akinsho/flutter-tools.nvim",
+      requires = "nvim-lua/plenary.nvim",
+  }
+  use { 'ThePrimeagen/harpoon' , require = 'nvim-lua/plenary.nvim'}
+  use {'windwp/nvim-ts-autotag'}
+  use { 'BenGH28/neo-runner.nvim' }
+  use { "tpope/vim-fugitive" } 
+
 end)
