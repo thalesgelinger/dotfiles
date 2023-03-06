@@ -1,0 +1,20 @@
+{
+  "androidHome": "/Users/thalesgelinger/Library/Android/sdk",
+  "enableAndroid": true,
+  "enableIOS": true,
+  "enablePhysicalIOS": true,
+  "enablePrefetching": 2,
+  "idbPath": "/opt/homebrew/bin/idb",
+  "reactNative": {
+    "shortcuts": {
+      "enabled": true,
+      "reload": "Alt+Shift+R",
+      "openDevMenu": "Alt+Shift+D"
+    }
+  },
+  "darkMode": "dark",
+  "showWelcomeAtStartup": true,
+  "suppressPluginErrors": false,
+  "enablePluginMarketplace": true,
+  "enablePluginMarketplaceAutoUpdate": true
+}
