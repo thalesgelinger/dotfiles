@@ -1,12 +1,9 @@
+function transparentBg()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+end
 
-require("tokyonight").setup {
-    style = "storm",
-    transparent = true
-}
+vim.cmd [[colorscheme dracula]]
 
-vim.g.tokyonight_transparent_sidebar = true
-vim.g.tokyonight_transparent = true
-vim.opt.background = "dark"
+transparentBg()
 
-vim.cmd "colorscheme tokyonight"
- 

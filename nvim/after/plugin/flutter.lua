@@ -1,5 +1,5 @@
-require("flutter-tools").setup{
-    lsp = {
-        on_attach = nil, 
+require("flutter-tools").setup {
+    debugger = {
+        enabled = true,
     }
-} -- use defaults
+}
