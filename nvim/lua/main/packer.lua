@@ -69,4 +69,5 @@ return require('packer').startup(function(use)
 
     -- colorize
     use 'norcalli/nvim-colorizer.lua'
+    use 'mbbill/undotree'
 end)
