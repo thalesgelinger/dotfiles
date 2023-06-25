@@ -27,3 +27,4 @@ local function add_to_styles_as_view()
 end
 
 vim.keymap.set("n", "<leader>sv", add_to_styles_as_view)
+
