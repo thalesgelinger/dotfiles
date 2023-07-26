@@ -14,10 +14,6 @@ return {
 
     'reisub0/hot-reload.vim',
     'neovim/nvim-lspconfig',
-    {
-        "williamboman/mason.nvim",
-        build = ":MasonUpdate" -- :MasonUpdate updates registry contents
-    },
     'pantharshit00/vim-prisma',
     --use 'leafOfTree/vim-svelte-plugin'
     { 'kyazdani42/nvim-web-devicons', lazy = true },

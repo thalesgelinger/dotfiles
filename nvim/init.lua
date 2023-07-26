@@ -31,9 +31,9 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
-vim.keymap.set("n", "<C-s>", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>f", "<cmd>Prettier<CR>")
-vim.keymap.set("n", "<C-q>", "<cmd>q<CR>")
+
+vim.keymap.set("n", "<C-s>", "<cmd>w<CR>")
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -75,6 +75,7 @@ vim.keymap.set('n', '<leader>do', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>dj', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>dk', vim.diagnostic.goto_next)
 
+vim.g.dap_virtual_text = true
 
 vim.g.vim_svelte_plugin_load_full_syntax = 1
 

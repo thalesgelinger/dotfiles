@@ -34,9 +34,10 @@ return {
             'volar',
         })
 
-        lsp.configure('dartls', { force_setup = true })
         lsp.configure('svelte', { force_setup = true })
         lsp.configure('volar', { force_setup = true })
+
+        lsp.skip_server_setup({'jdtls'})
 
         lsp.nvim_workspace()
 
@@ -47,16 +48,17 @@ return {
         })
 
         -- (Optional) Configure lua language server for neovim
-        require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+        local lspconfig = require('lspconfig')
+        lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+        lspconfig.dartls.setup {}
+        lspconfig.clangd.setup {}
+
+
 
         local cmp = require('cmp')
-        local cmp_action = lsp.cmp_action()
 
         cmp.setup({
             mapping = {
-                -- `Enter` key to confirm completion
-                ['<CR>'] = cmp.mapping.confirm({ select = false }),
-
                 -- Ctrl+Space to trigger completion menu
                 ['<C-Space>'] = cmp.mapping.complete(),
             }
