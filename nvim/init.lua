@@ -15,6 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 -- require('reacthelpers')
 vim.g.mapleader = " "
 
+vim.opt.guicursor = ""
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -22,6 +24,7 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 -- vim.opt.cursorline = true
@@ -29,6 +32,13 @@ vim.opt.incsearch = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/.undo/"
+vim.opt.undofile = true
+
+vim.opt.scrolloff = 8
 
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
 vim.keymap.set("n", "<leader>f", "<cmd>Prettier<CR>")
@@ -78,7 +88,11 @@ vim.keymap.set('n', '<leader>dk', vim.diagnostic.goto_next)
 vim.g.dap_virtual_text = true
 
 vim.g.vim_svelte_plugin_load_full_syntax = 1
+--
+vim.g.termguicolors = true
+--Nightfly
+vim.g.nightflyTransparent = true
+vim.g.nightflyVirtualTextColor = true
 
 
 return require('lazy').setup("plugins")
-
