@@ -1,5 +1,6 @@
 package grc
 package https://github.com/cgestes/spaceFish
+package https://github.com/dracula/fish
 theme agnoster
 theme bira
 theme bobthefish

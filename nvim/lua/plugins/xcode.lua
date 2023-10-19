@@ -10,7 +10,6 @@ return {
     config = function()
         local xcode = require("xcode")
         vim.keymap.set('n', '<leader>xc', xcode.add_class)
-        vim.api.nvim_set_keymap('v', '<leader>xa', [[:lua require("xcode").add_assets()<CR>]],
-            { noremap = true, silent = true })
+        vim.keymap.set('n', '<leader>xa', xcode.add_assets)
     end
 }

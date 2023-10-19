@@ -9,6 +9,13 @@ return {
             go = { "go", "run" },
             js = { "node" },
             rs = { "cargo", "run" },
+            c = {
+                "cc",
+                "main.c",
+                "module.c",
+                "&&",
+                "./a.out"
+            }
         })
 
         vim.keymap.set("n", "<leader>rr", anyrun.execute)
