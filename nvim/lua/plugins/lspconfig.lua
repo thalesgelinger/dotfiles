@@ -52,6 +52,10 @@ return {
         lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
         lspconfig.dartls.setup {}
         lspconfig.clangd.setup {}
+        lspconfig.htmx.setup {
+            filetypes = { "leaf", "html" }
+        }
+        vim.cmd [[ autocmd BufRead,BufNewFile *.leaf set filetype=html ]]
 
 
         lsp.on_attach(function(client, bufnr)
@@ -66,6 +70,23 @@ return {
             vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
         end)
 
+        local swift_lsp = vim.api.nvim_create_augroup("swift_lsp", { clear = true })
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = { "swift" },
+            callback = function()
+                local root_dir = vim.fs.dirname(vim.fs.find({
+                    "Package.swift",
+                    ".git",
+                }, { upward = true })[1])
+                local client = vim.lsp.start({
+                    name = "sourcekit-lsp",
+                    cmd = { "sourcekit-lsp" },
+                    root_dir = root_dir,
+                })
+                vim.lsp.buf_attach_client(0, client)
+            end,
+            group = swift_lsp,
+        })
 
         local cmp = require('cmp')
 
