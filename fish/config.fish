@@ -52,11 +52,10 @@ alias intel "arch -x86_64"
 
 alias ls "exa -la --icons"
 alias cat "bat"
-
-alias vim "nvim"
-
-alias gc "git co (git branch -a | fzf | awk '{\$1=\$1};1')"
-
+alias .. "cd .."
+function cb
+    git branch -a | awk -F 'remotes/origin/' '{print $2}' | grep -v '^$' | fzf | xargs git switch
+end
 alias emu "~/.config/scripts/emu"
 alias simu "~/.config/scripts/simu"
 
@@ -78,6 +77,8 @@ end
 set -gx LDFLAGS "-L/opt/homebrew/opt/llvm/lib"
 set -gx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
 
+set fish_greeting ""
+
 # ASDF
 . ~/.asdf/plugins/java/set-java-home.fish
 . /opt/homebrew/opt/asdf/libexec/asdf.fish
@@ -86,22 +87,26 @@ tmux source-file ~/.config/tmux/.tmux.conf
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 zoxide init fish | source
 
-  echo "           ▓▓▓▓▓       " 
-  echo "          ▓▓▓▓████▓    " 
-  echo "         ▓▓▓▓████████▓ " 
-  echo "        ▓▓  ▓█████████▓" 
-  echo "           ▓█████████▓ " 
-  echo "  ▓▓        ▓███████▓  " 
-  echo "   ▓▓███▓▓██▓▓▓████▓   " 
-  echo "       ▓▓▓██████▓█     " 
-  echo "    ▓▓     ▓█████      " 
-  echo "▓▓▓       ▓▓████▓▓     " 
-  echo " ▓█▓    ▓▓▓██    ▓▓    " 
-  echo "    ▓▓▓████▓▓      ▓   " 
-  echo "                  ▓▓▓  " 
-  echo "                 ▓▓▓█  " 
-  echo "                ▓▓███  " 
-  echo " ▓   ▓    ▓▓▓▓▓█████▓  " 
-  echo "  ▓▓▓▓▓▓▓████████▓▓    " 
-  echo "      ▓▓▓▓▓▓▓▓         " 
-  echo "                       "           
+set Cyan '\033[0;36m'
+                                                  
+echo -e "$Cyan               ▒███▓▒               "
+echo -e "$Cyan              ▓███████▓▒            "
+echo -e "$Cyan       ▒▓▒  ▒████████████▒          "
+echo -e "$Cyan        ███████████████████         "
+echo -e "$Cyan       ▒████████████████████▓       "
+echo -e "$Cyan      ▓█████████████████████▓       "
+echo -e "$Cyan▒█████████▒  ████████████▓▒         "
+echo -e "$Cyan ██████████▓▓██████████▓            "
+echo -e "$Cyan ▒█████████████████████▒      ▓▓    "
+echo -e "$Cyan   ▒▓███████████████▓███▓    ▓███▒  "
+echo -e "$Cyan    ▒▓██████████████▓▒▒▓▓▓▓███████▓ "
+echo -e "$Cyan   ████████████████████████████████ "
+echo -e "$Cyan  █████████████████████████████████▒"
+echo -e "$Cyan ▒█████████████████████████████████▒"
+echo -e "$Cyan  █████████████████████████████████ "
+echo -e "$Cyan  ▓███████████████████████████████  "
+echo -e "$Cyan   ▒████████████████████████████▓   "
+echo -e "$Cyan      ▓██████████████████████▓▒     "
+echo -e "$Cyan         ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒          "
+
+
