@@ -14,7 +14,7 @@ return {
             -- ensure_installed = "maintained",
             sync_install = false,
             auto_install = true,
-            highlight = { 
+            highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = false,
             },

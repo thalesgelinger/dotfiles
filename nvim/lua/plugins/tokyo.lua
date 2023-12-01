@@ -5,11 +5,18 @@ return {
     opts = {},
     config = function()
         require("tokyonight").setup({
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-            transparent = false,
+            style = "storm",
+            transparent = true,
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            },
         })
+
+        vim.cmd [[colorscheme tokyonight]]
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "LineNr", { fg = "#bbbbbb" })
     end
 
 }

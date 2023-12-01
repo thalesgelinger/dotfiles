@@ -77,7 +77,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 --rename highlighted text
-vim.keymap.set("v", "<C-r>", '"hy:%s/<C-r>h//gc<left><left><left>')
+vim.keymap.set("v", "<C-r>", '"hy:%s/<C-r>h//g<left><left>')
 
 
 --Diagnostics
@@ -93,6 +93,9 @@ vim.g.termguicolors = true
 --Nightfly
 vim.g.nightflyTransparent = true
 vim.g.nightflyVirtualTextColor = true
+
+--Hide Netrw header
+vim.g.netrw_banner = 0
 
 
 return require('lazy').setup("plugins")
