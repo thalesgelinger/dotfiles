@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo /Users/tgelin01/.asdf/installs/kotlin/1.9.21/kotlinc/lib/kotlin-stdlib.jar:/Users/tgelin01/.asdf/installs/kotlin/1.9.21/kotlinc/lib/kotlin-script-runtime.jar:/Users/tgelin01/.asdf/installs/kotlin/1.9.21/kotlinc/lib/kotlin-scripting-compiler.jar
